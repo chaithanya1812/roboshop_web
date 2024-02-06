@@ -1,6 +1,12 @@
 FROM nginx
+
+LABEL projectName=roboShop \
+      env=dev
+
 ADD https://roboshop-artifacts.s3.amazonaws.com/frontend.zip  /tmp/
+
 RUN apt-get update && apt-get install unzip -y
+
 RUN  rm -rf /usr/share/nginx/html/* && \
      rm -rf /etc/nginx/nginx.cong &&  \
     rm -rf /etc/nginx/conf.d/default.conf && \
