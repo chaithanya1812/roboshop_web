@@ -7,3 +7,4 @@ RUN  rm -rf /usr/share/nginx/html/* && \
     unzip /tmp/frontend.zip -d /usr/share/nginx/html/
 
 # COPY roboshop.conf /etc/nginx/nginx.conf  # Iam doing at run-time configfuration as volume..
+# BY using  <    -v roboshop.conf:/etc/nginx/nginx.conf    >
